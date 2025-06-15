@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun Nurul Aziza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes dance {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-10px) rotate(-5deg); }
+      50% { transform: translateY(0) rotate(0deg); }
+      75% { transform: translateY(-10px) rotate(5deg); }
+    }
+
+    .floating-bear {
+      position: fixed;
+      font-size: 50px;
+      pointer-events: none;
+      animation: float 3s ease-in-out infinite;
+      z-index: 1000;
+    }
+
+    .dancing-bear {
+      position: fixed;
+      font-size: 40px;
+      pointer-events: none;
+      animation: dance 2s infinite;
+      z-index: 1000;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+      color: #333;
+      text-align: center;
+      padding: 1rem;
+    }
+    header {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #d63384;
+      margin-top: 2rem;
+    }
+    .content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .video-section {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @keyframes cardFloat {
+      0% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-5px) rotate(1deg); }
+      50% { transform: translateY(-10px) rotate(-1deg); }
+      75% { transform: translateY(-5px) rotate(1deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      animation: cardFloat 4s ease-in-out infinite;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05) translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+    }
+    .card video {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .message {
+      font-size: 1.2rem;
+      padding: 0.1rem;
+    }
+    audio {
+      margin-top: 2rem;
+    }
+    @media (max-width: 1200px) {
+      .content {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 900px) {
+      .content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .content, .video-section {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      header {
+        font-size: 2rem;
+      }
+      .message {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <style>
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      z-index: 10;
+      animation: balloonFloat 3s ease-in-out infinite alternate;
+    }
+    .balloon-left {
+      top: 10px;
+      left: 10px;
+      transform: rotate(-15deg);
+    }
+    .balloon-right {
+      top: 10px;
+      right: 10px;
+      transform: rotate(15deg);
+    }
+    @keyframes balloonFloat {
+      0% { transform: translateY(0) scale(1) rotate(0deg); }
+      100% { transform: translateY(-10px) scale(1.05) rotate(5deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Balon di pojok kiri dan kanan atas -->
+  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f388.png" alt="Balon" class="balloon balloon-left">
+  <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f388.png" alt="Balon" class="balloon balloon-right">
+  <header>
+    Selamat Ulang Tahun
+    <br>
+    Nurul Aziza
+    <br>
+    🎉🎂
+  </header>
+
+  <p class="message">
+    🌸 Selamat Ulang Tahun 🌸
+    <br>
+    🌸  Nurul Aziza  🌸
+    <br>
+    <br>
+    Hari ini adalah hari istimewa yang membawa kebahagiaan, karena seseorang yang begitu berharga telah hadir di dunia—dan dalam hidupku.
+
+      Terima kasih telah menjadi sosok yang penuh cahaya, yang selalu membawa senyum dan ketenangan.
+      Di hari ulang tahunmu ini, aku tidak hanya mendoakan kebahagiaan dan kesehatanmu, tapi juga semoga segala mimpi yang kamu genggam bisa terwujud satu per satu.
+
+      Semoga setiap langkahmu diberkahi, setiap mimpimu dimudahkan, dan setiap harimu dipenuhi cinta dan tawa.
+      Kamu pantas mendapatkan segalanya yang indah, karena kamu adalah keindahan itu sendiri.
+
+      Selamat bertambah usia, sayang.
+      Terima kasih sudah hadir di hidupku.
+      Aku mencintaimu, hari ini, besok, dan selamanya. 💖
+  </p>
+
+  <div class="content">
+    <!-- Foto utama Nurul Azizah di paling atas -->
+    <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; background: #ffe4ec;">
+      <a href="img/5.jpg" data-fancybox data-caption="Nurul Azizah yang ulang tahun">
+        <img src="img/5.jpg" alt="Nurul Azizah" style="height: 300px; width: auto; object-fit: cover; border-radius: 1rem; box-shadow: 0 6px 12px rgba(255,0,100,0.2); margin-bottom: 1rem;">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">Sayaaaaangnyaaa akuuu</div>
+    </div>
+
+    <div class="card">
+      <a href="img/1.jpg" data-fancybox>
+        <img src="img/1.jpg" alt="Kenangan bersama Nurul Aziza">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">Lagi makan bebekkkk</div>
+    </div>
+    <div class="card">
+      <a href="img/2.jpg" data-fancybox>
+        <img src="img/2.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">Lagi makan bebekkkk lagiiiii</div>
+    </div>
+    <div class="card">
+      <a href="img/3.jpg" data-fancybox>
+        <img src="img/3.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">sama lagiii makan bebekkkk... tapi versi AI</div>
+    </div>
+    <div class="card">
+      <a href="img/4.jpg" data-fancybox>
+        <img src="img/4.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">Foto Pertama yang sayaaaaang kasih ke akuuuu</div>
+    </div>
+    <div class="card">
+      <a href="img/6.jpg" data-fancybox>
+        <img src="img/6.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu</div>
+    </div>
+    <div class="card">
+      <a href="img/7.jpg" data-fancybox>
+        <img src="img/7.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagi nyoba variasi krudung baruuu... tapi tetep cantikkk</div>
+    </div>
+    <div class="card">
+      <a href="img/8.jpg" data-fancybox>
+        <img src="img/8.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu foto latar biruuuu hehehe</div>
+    </div>
+    <div class="card">
+      <a href="img/9.jpg" data-fancybox>
+        <img src="img/9.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu di kondangan, aku mah enggak di ajak </div>
+    </div>
+    <div class="card">
+      <a href="img/10.jpg" data-fancybox>
+        <img src="img/10.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagi main sama temen"nyaaaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/11.jpg" data-fancybox>
+        <img src="img/11.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagi beli buat nutupin jerawat.... (lupa lagi namanya aku)</div>
+    </div>
+    <div class="card">
+      <a href="img/12.jpg" data-fancybox>
+        <img src="img/12.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagiii di sekolahhh</div>
+    </div>
+    <div class="card">
+      <a href="img/13.jpg" data-fancybox>
+        <img src="img/13.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagiii di sekolahhh tapi pake baju pramukaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/14.jpg" data-fancybox>
+        <img src="img/14.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagi berangkat ke kebun binatang</div>
+    </div>
+    <div class="card">
+      <a href="img/15.jpg" data-fancybox>
+        <img src="img/15.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagi mam sosisss... parah aku mahh enggak dibagiii</div>
+    </div>
+    <div class="card">
+      <a href="img/16.jpg" data-fancybox>
+        <img src="img/16.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagi mantai dluuu</div>
+    </div>
+
+    <div class="card">
+      <a href="img/18.jpg" data-fancybox>
+        <img src="img/18.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagiii pose hehehe</div>
+    </div>
+    <div class="card">
+      <a href="img/19.jpg" data-fancybox>
+        <img src="img/19.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagiii pose  ke 2 hehehe</div>
+    </div>
+    <div class="card">
+      <a href="img/20.jpg" data-fancybox>
+        <img src="img/20.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagiii pose ke 3 hehehe</div>
+    </div>
+    <div class="card">
+      <a href="img/21.jpg" data-fancybox>
+        <img src="img/21.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagiii pake kerudung baru versi 2</div>
+    </div>
+    <div class="card">
+      <a href="img/22.jpg" data-fancybox>
+        <img src="img/22.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu sama akuu versi AI</div>
+    </div>
+    <div class="card">
+      <a href="img/23.jpg" data-fancybox>
+        <img src="img/23.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagiii pose di sela" kegiatan nyetrikaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/24.jpg" data-fancybox>
+        <img src="img/24.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan yaaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/25.jpg" data-fancybox>
+        <img src="img/25.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan lagi yaaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/26.jpg" data-fancybox>
+        <img src="img/26.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu tapi fotonya ngeblur hehehe</div>
+    </div>
+    <div class="card">
+      <a href="img/27.jpg" data-fancybox>
+        <img src="img/27.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan lagi yaaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/28.jpg" data-fancybox>
+        <img src="img/28.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan lagi lagi yaaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/29.jpg" data-fancybox>
+        <img src="img/29.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... dadahhh </div>
+    </div>
+    <div class="card">
+      <a href="img/30.jpg" data-fancybox>
+        <img src="img/30.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan yaaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/31.jpg" data-fancybox>
+        <img src="img/31.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan yaaaa</div>
+    </div>
+    <div class="card">
+      <a href="img/32.jpg" data-fancybox>
+        <img src="img/32.jpg" alt="Momen manis lainnya">
+      </a>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan yaaaa blur lagiii</div>
+    </div>
+
+
+  </div>
+
+  <div class="video-section">
+    <div class="card">
+      <video controls>
+        <source src="img/17.mp4" type="video/mp4">
+        Browser kamu tidak mendukung pemutar video.
+      </video>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu.... maafkan yaaaa</div>
+    </div>
+    <div class="card">
+      <video controls>
+        <source src="img/33.mp4" type="video/mp4">
+        Browser kamu tidak mendukung pemutar video.
+      </video>
+      <div style="font-weight: bold; font-size: 1.2rem; color: #d72660;">cantikknyaaa akuuuu lagi happy</div>
+    </div>
+  </div>
+
+  <audio loop style="display: none;">
+    <source src="music/Jamrud - Selamat Ulang Tahun (Official Lyric Video).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    // Inisialisasi Fancybox
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
+
+    // Fungsi untuk mencoba memainkan audio
+    function tryPlayAudio() {
+      const audio = document.querySelector('audio');
+      if (audio) {
+        // Try to play audio on user interaction
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function(error) {
+            console.log("Audio play failed:", error);
+            // Optionally show a UI element to let user know they need to interact
+          });
+        }
+      }
+    }
+
+    // Fungsi untuk membuat konfeti
+    function throwConfetti() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+
+    // Fungsi untuk membuat boneka beruang mengambang
+    function createFloatingBear() {
+      const bear = document.createElement('div');
+      bear.className = 'floating-bear';
+      bear.innerHTML = '🧸';
+      bear.style.left = Math.random() * window.innerWidth + 'px';
+      bear.style.top = Math.random() * window.innerHeight + 'px';
+      document.body.appendChild(bear);
+
+      // Hapus beruang setelah beberapa waktu
+      setTimeout(() => bear.remove(), 10000);
+    }
+
+    // Fungsi untuk membuat boneka beruang menari
+    function createDancingBear() {
+      const bear = document.createElement('div');
+      bear.className = 'dancing-bear';
+      bear.innerHTML = '🧸';
+      bear.style.left = Math.random() * window.innerWidth + 'px';
+      bear.style.bottom = '20px';
+      document.body.appendChild(bear);
+
+      // Hapus beruang setelah beberapa waktu
+      setTimeout(() => bear.remove(), 8000);
+    }
+
+    // Event Listeners dan Interval timers
+    window.addEventListener('load', function() {
+      tryPlayAudio();
+      throwConfetti();
+      // Mulai interval setelah halaman dimuat
+      setInterval(throwConfetti, 5000);
+      setInterval(createFloatingBear, 3000);
+      setInterval(createDancingBear, 4000);
+    });
+
+    // Event listeners untuk audio
+    document.addEventListener('click', tryPlayAudio);
+    document.addEventListener('touchstart', tryPlayAudio);
+    document.addEventListener('keypress', tryPlayAudio);
+  </script>
+</body>
+</html>
